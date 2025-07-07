@@ -11,6 +11,7 @@ const texts = {
     name: "Nombre",
     email: "Correo electrónico",
     message: "Mensaje",
+    orContact: "O contáctame directamente:",
   },
   en: {
     contact: "Contact",
@@ -19,6 +20,7 @@ const texts = {
     name: "Name",
     email: "Email",
     message: "Message",
+    orContact: "Or contact me directly:",
   },
 };
 
@@ -34,7 +36,7 @@ export default function Contact({ language, darkMode }: ContactProps) {
       <p className="text-gray-600 dark:text-gray-300 max-w-2xl mb-8">
         {texts[language].contactText}
       </p>
-      <form className="flex flex-col gap-4 w-full max-w-md text-left">
+      <form className="flex flex-col gap-4 w-full max-w-md text-left mb-8">
         <input
           type="text"
           placeholder={texts[language].name}
@@ -57,6 +59,56 @@ export default function Contact({ language, darkMode }: ContactProps) {
           {texts[language].sendMessage}
         </button>
       </form>
+
+      <div className="flex flex-col items-center">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          {texts[language].orContact}
+        </p>
+        <div className="flex gap-6">
+          <a
+            href="mailto:roblesfacundo7@gmail.com"
+            className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            roblesfacundo7@gmail.com
+          </a>
+          <a
+            href="https://wa.me/543815052050"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+              />
+            </svg>
+            +54 381 5052050
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
