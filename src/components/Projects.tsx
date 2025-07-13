@@ -43,11 +43,10 @@ const projectsData: Project[] = [
     githubUrl: "https://github.com/FacuRob/TryHackMe",
   },
   {
-    title: "Proyecto 3",
-    image: "https://via.placeholder.com/400x250?text=Project+3",
+    title: "CiberSeguridad - Python",
+    image: "images/Ciberseguridad.jfif",
     description: "Descripción breve del tercer proyecto y sus características.",
     githubUrl: "https://github.com",
-    websiteUrl: "https://example.com",
   },
 ];
 

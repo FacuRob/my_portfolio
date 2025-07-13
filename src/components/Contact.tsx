@@ -5,108 +5,78 @@ interface ContactProps {
 
 const texts = {
   es: {
-    contact: "Contacto",
-    contactText: "Puedes contactarme para colaborar o trabajar juntos.",
-    sendMessage: "Enviar mensaje",
-    name: "Nombre",
-    email: "Correo electrónico",
-    message: "Mensaje",
-    orContact: "O contáctame directamente:",
+    title: "Trabajemos juntos!",
+    email: "Email",
+    whatsapp: "Whatsapp",
   },
   en: {
-    contact: "Contact",
-    contactText: "You can contact me to collaborate or work together.",
-    sendMessage: "Send Message",
-    name: "Name",
+    title: "Let's work together!",
     email: "Email",
-    message: "Message",
-    orContact: "Or contact me directly:",
+    whatsapp: "Whatsapp",
   },
 };
 
-export default function Contact({ language }: ContactProps) {
+export default function Contact({ language, darkMode }: ContactProps) {
   return (
     <section
       id="contact"
-      className="h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 px-4 text-center w-full"
+      className={`min-h-screen flex flex-col md:flex-row items-center justify-center px-8 py-12 md:px-16 ${
+        darkMode ? "bg-gray-800" : "bg-gray-100"
+      }`}
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-        {texts[language].contact}
-      </h2>
-      <p className="text-gray-600 dark:text-gray-300 max-w-2xl mb-8">
-        {texts[language].contactText}
-      </p>
-      <form className="flex flex-col gap-4 w-full max-w-md text-left mb-8">
-        <input
-          type="text"
-          placeholder={texts[language].name}
-          className="px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none border border-gray-300 dark:border-gray-600"
-        />
-        <input
-          type="email"
-          placeholder={texts[language].email}
-          className="px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none border border-gray-300 dark:border-gray-600"
-        />
-        <textarea
-          placeholder={texts[language].message}
-          rows={4}
-          className="px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none border border-gray-300 dark:border-gray-600"
-        ></textarea>
-        <button
-          type="submit"
-          className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-2xl text-lg transition"
-        >
-          {texts[language].sendMessage}
-        </button>
-      </form>
+      {/* Imagen decorativa */}
+      <div className="md:w-1/2 flex justify-center mb-8 md:mb-0">
+        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            alt="Trabajo en equipo"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
 
-      <div className="flex flex-col items-center">
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          {texts[language].orContact}
-        </p>
-        <div className="flex gap-6">
-          <a
-            href="mailto:roblesfacundo7@gmail.com"
-            className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+      {/* Información de contacto */}
+      <div className="md:w-1/2 text-center md:text-left">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
+          {texts[language].title}
+        </h2>
+
+        <div className="space-y-6">
+          <div className="flex flex-col items-center md:items-start">
+            <p className="text-lg font-medium mb-2 text-gray-700 dark:text-gray-300">
+              {texts[language].email}
+            </p>
+            <a
+              href="mailto:facurob.dev@gmail.com"
+              className="text-xl text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-2"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              <img
+                src="images/email-icon.png"
+                alt="Email icon"
+                className="h-6 w-6"
               />
-            </svg>
-            roblesfacundo7@gmail.com
-          </a>
-          <a
-            href="https://wa.me/543815052050"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+              facurob.dev@gmail.com
+            </a>
+          </div>
+
+          <div className="flex flex-col items-center md:items-start">
+            <p className="text-lg font-medium mb-2 text-gray-700 dark:text-gray-300">
+              {texts[language].whatsapp}
+            </p>
+            <a
+              href="https://wa.me/543815052050"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl text-green-600 dark:text-green-400 hover:underline flex items-center gap-2"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+              <img
+                src="images/whatsapp-icon.png"
+                alt="WhatsApp icon"
+                className="h-6 w-6"
               />
-            </svg>
-            +54 381 5052050
-          </a>
+              +54 381 5052050
+            </a>
+          </div>
         </div>
       </div>
     </section>

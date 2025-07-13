@@ -36,6 +36,7 @@ const texts = {
       </>
     ),
     downloadCV: "Descargar CV",
+    skillsTitle: "Tecnologías y Herramientas",
   },
   en: {
     about: "About Me",
@@ -69,6 +70,7 @@ const texts = {
       </>
     ),
     downloadCV: "Download CV",
+    skillsTitle: "Technologies & Tools",
   },
 };
 
@@ -86,79 +88,103 @@ export default function About({ language, darkMode }: AboutProps) {
   return (
     <section
       id="about"
-      className={`h-screen flex flex-col items-center justify-center px-4 text-center w-full ${
+      className={`h-auto min-h-screen flex flex-col items-center justify-center px-4 py-12 text-center w-full ${
         darkMode ? "bg-gray-900 text-gray-300" : "bg-gray-50 text-gray-600"
       }`}
     >
-      <h2
-        className={`text-3xl md:text-4xl font-bold mb-6 ${
-          darkMode ? "text-white" : "text-gray-900"
-        }`}
-      >
-        {texts[language].about}
-      </h2>
-      <div
-        className={`max-w-2xl text-left ${
-          darkMode ? "text-gray-300" : "text-gray-600"
-        }`}
-      >
-        {texts[language].aboutText}
+      <div className="max-w-4xl w-full">
+        <h2
+          className={`text-3xl md:text-4xl font-bold mb-6 ${
+            darkMode ? "text-white" : "text-gray-900"
+          }`}
+        >
+          {texts[language].about}
+        </h2>
+        <div
+          className={`max-w-2xl mx-auto text-left ${
+            darkMode ? "text-gray-300" : "text-gray-600"
+          }`}
+        >
+          {texts[language].aboutText}
 
-        {/* Botones */}
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          {/* Botón Descargar CV */}
-          <button
-            onClick={handleDownloadCV}
-            className={`px-6 py-2 rounded-lg font-medium transition-all ${
-              darkMode
-                ? "bg-blue-600 hover:bg-blue-700 text-white"
-                : "bg-blue-500 hover:bg-blue-600 text-white"
+          {/* Botones */}
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            {/* Botón Descargar CV */}
+            <button
+              onClick={handleDownloadCV}
+              className={`px-6 py-2 rounded-lg font-medium transition-all ${
+                darkMode
+                  ? "bg-blue-600 hover:bg-blue-700 text-white"
+                  : "bg-blue-500 hover:bg-blue-600 text-white"
+              }`}
+            >
+              {texts[language].downloadCV}
+            </button>
+
+            {/* Botón LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/frobles-dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-6 py-2 rounded-lg font-medium transition-all border ${
+                darkMode
+                  ? "border-blue-400 text-blue-400 hover:bg-blue-900/30"
+                  : "border-blue-500 text-blue-500 hover:bg-blue-50"
+              }`}
+            >
+              LinkedIn
+            </a>
+
+            {/* Botón GitHub */}
+            <a
+              href="https://github.com/FacuRob"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-6 py-2 rounded-lg font-medium transition-all border ${
+                darkMode
+                  ? "border-gray-400 text-gray-400 hover:bg-gray-900/30"
+                  : "border-gray-500 text-gray-500 hover:bg-gray-50"
+              }`}
+            >
+              GitHub
+            </a>
+
+            {/* Botón TryHackMe */}
+            <a
+              href="https://tryhackme.com/p/roblesfacundo7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-6 py-2 rounded-lg font-medium transition-all border ${
+                darkMode
+                  ? "border-red-400 text-red-400 hover:bg-red-900/30"
+                  : "border-red-500 text-red-500 hover:bg-red-50"
+              }`}
+            >
+              TryHackMe
+            </a>
+          </div>
+        </div>
+
+        {/* Sección de habilidades */}
+        <div className="mt-12">
+          <h3
+            className={`text-2xl md:text-3xl font-bold mb-6 ${
+              darkMode ? "text-white" : "text-gray-900"
             }`}
           >
-            {texts[language].downloadCV}
-          </button>
-
-          {/* Botón LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/frobles-dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-6 py-2 rounded-lg font-medium transition-all border ${
-              darkMode
-                ? "border-blue-400 text-blue-400 hover:bg-blue-900/30"
-                : "border-blue-500 text-blue-500 hover:bg-blue-50"
+            {texts[language].skillsTitle}
+          </h3>
+          <div
+            className={`p-6 rounded-lg ${
+              darkMode ? "bg-gray-800" : "bg-gray-100"
             }`}
           >
-            LinkedIn
-          </a>
-
-          {/* Botón GitHub */}
-          <a
-            href="https://github.com/FacuRob"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-6 py-2 rounded-lg font-medium transition-all border ${
-              darkMode
-                ? "border-gray-400 text-gray-400 hover:bg-gray-900/30"
-                : "border-gray-500 text-gray-500 hover:bg-gray-50"
-            }`}
-          >
-            GitHub
-          </a>
-
-          {/* Botón TryHackMe */}
-          <a
-            href="https://tryhackme.com/p/roblesfacundo7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-6 py-2 rounded-lg font-medium transition-all border ${
-              darkMode
-                ? "border-red-400 text-red-400 hover:bg-red-900/30"
-                : "border-red-500 text-red-500 hover:bg-red-50"
-            }`}
-          >
-            TryHackMe
-          </a>
+            <img
+              src="https://skillicons.dev/icons?i=js,ts,html,css,react,nodejs,express,nestjs,mysql,mongo,py,kali,linux,git,vscode,postman&perline=8"
+              alt="Technologies I use"
+              className="mx-auto w-full max-w-2xl"
+            />
+          </div>
         </div>
       </div>
     </section>
