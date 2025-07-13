@@ -24,7 +24,7 @@ const texts = {
   },
 };
 
-export default function Contact({ language, darkMode }: ContactProps) {
+export default function Contact({ language }: ContactProps) {
   return (
     <section
       id="contact"

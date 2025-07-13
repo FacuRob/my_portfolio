@@ -120,7 +120,7 @@ const texts = {
   },
 };
 
-export default function Education({ language, darkMode }: EducationProps) {
+export default function Education({ language }: EducationProps) {
   return (
     <section
       id="education"

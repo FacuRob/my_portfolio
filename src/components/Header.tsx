@@ -10,7 +10,7 @@ import {
   FiAward,
   FiMail,
 } from "react-icons/fi";
-import profileImage from "@/assets/images/profile.jpg";
+import profileImage from "/images/profile.jpg";
 
 interface HeaderProps {
   language: "es" | "en";
