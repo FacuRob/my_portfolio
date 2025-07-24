@@ -22,12 +22,13 @@ const texts = {
           </li>
           <li>
             <strong>🚀 Desarrollo de Proyectos</strong>: Creando soluciones como{" "}
-            <strong>DevTree</strong> (un clon personalizable de LinkTree) y la
-            página web de <strong>BarPintas</strong>.
+            <strong>DevTree</strong> (Clon personalizable de LinkTree) y el
+            sitio web de <strong>CyberTolls</strong> (Conjunto de herramientas
+            de Ciberseguridad).
           </li>
           <li>
             <strong>💻 Tecnologías</strong>: Profundizando en{" "}
-            <strong>React, Node.js, NestJS</strong> y bases de datos para
+            <strong>React, Node.js, TypeScript</strong> y bases de datos para
             construir aplicaciones escalables.
           </li>
         </ul>
@@ -56,13 +57,13 @@ const texts = {
           </li>
           <li>
             <strong>🚀 Project Development</strong>: Building solutions like{" "}
-            <strong>DevTree</strong> (a customizable LinkTree clone) and{" "}
-            <strong>BarPintas</strong> website.
+            <strong>DevTree</strong> (Customizable LinkTree clone) and{" "}
+            <strong>CyberTools</strong> website (Cybersecurity Toolkit ).
           </li>
           <li>
             <strong>💻 Technologies</strong>: Deepening my knowledge in{" "}
-            <strong>React, Node.js, NestJS</strong> and databases for scalable
-            applications.
+            <strong>React, Node.js, TypeScript</strong> and databases for
+            scalable applications.
           </li>
         </ul>
         I'm passionate about building useful things, from intuitive interfaces
@@ -73,6 +74,34 @@ const texts = {
     skillsTitle: "Technologies & Tools",
   },
 };
+
+// Lista de iconos de habilidades y lenguajes
+const skillsIcons = [
+  "html",
+  "css",
+  "js",
+  "bootstrap",
+  "react",
+  "vite",
+  "tailwind",
+  "nodejs",
+  "express",
+  "npm",
+  "ts",
+  "mysql",
+  "mongo",
+  "py",
+  "kali",
+  "linux",
+  "windows",
+  "git",
+  "github",
+  "vscode",
+  "visualstudio",
+  "postman",
+  "netlify",
+  "aws",
+];
 
 export default function About({ language, darkMode }: AboutProps) {
   const handleDownloadCV = () => {
@@ -165,7 +194,7 @@ export default function About({ language, darkMode }: AboutProps) {
           </div>
         </div>
 
-        {/* Sección de habilidades */}
+        {/* Sección de habilidades y lenguajes con animación */}
         <div className="mt-12">
           <h3
             className={`text-2xl md:text-3xl font-bold mb-6 ${
@@ -175,15 +204,31 @@ export default function About({ language, darkMode }: AboutProps) {
             {texts[language].skillsTitle}
           </h3>
           <div
-            className={`p-6 rounded-lg ${
+            className={`p-6 rounded-lg overflow-hidden relative ${
               darkMode ? "bg-gray-800" : "bg-gray-100"
             }`}
           >
-            <img
-              src="https://skillicons.dev/icons?i=js,ts,html,css,react,nodejs,express,nestjs,mysql,mongo,py,kali,linux,git,vscode,postman&perline=8"
-              alt="Technologies I use"
-              className="mx-auto w-full max-w-2xl"
-            />
+            <div className="flex w-max animate-infinite-scroll">
+              {skillsIcons.map((icon, index) => (
+                <div key={index} className="mx-4">
+                  <img
+                    src={`https://skillicons.dev/icons?i=${icon}`}
+                    alt={icon}
+                    className="h-12 w-12"
+                  />
+                </div>
+              ))}
+              {/* Duplicamos los iconos para el efecto de loop continuo */}
+              {skillsIcons.map((icon, index) => (
+                <div key={`duplicate-${index}`} className="mx-4">
+                  <img
+                    src={`https://skillicons.dev/icons?i=${icon}`}
+                    alt={icon}
+                    className="h-12 w-12"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

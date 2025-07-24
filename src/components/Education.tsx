@@ -34,7 +34,8 @@ const texts = {
         title: "Desarrollador Web Desde Cero",
         institution: "EGG LIVE",
         year: "2023",
-        description: "Programa intensivo de 6 meses enfocada en FrontEnd.",
+        description:
+          "Programa Frontend de 6 meses, aprendiendo HTML, CSS, JavaScript.",
       },
       {
         title: "Soporte Tecnico en Sorfware y Hardware",
@@ -91,7 +92,8 @@ const texts = {
         title: "Web Developer From Scratch",
         institution: "EGG LIVE",
         year: "2023",
-        description: "6-month intensive program focused on FrontEnd.",
+        description:
+          "6-month Frontend Program, learning HTML, CSS, JavaScript.",
       },
       {
         title: "Software and Hardware Technical Support",
