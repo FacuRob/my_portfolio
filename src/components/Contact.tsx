@@ -28,7 +28,7 @@ export default function Contact({ language, darkMode }: ContactProps) {
       <div className="md:w-1/2 flex justify-center mb-8 md:mb-0">
         <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            src="/images/imagen.jpeg"
             alt="Trabajo en equipo"
             className="w-full h-full object-cover"
           />
