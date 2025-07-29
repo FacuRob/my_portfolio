@@ -23,7 +23,7 @@ const texts = {
           <li>
             <strong>🚀 Desarrollo de Proyectos</strong>: Creando soluciones como{" "}
             <strong>DevTree</strong> (Clon personalizable de LinkTree) y el
-            sitio web de <strong>CyberTolls</strong> (Conjunto de herramientas
+            sitio web de <strong>CyberTools</strong> (Conjunto de herramientas
             de Ciberseguridad).
           </li>
           <li>
