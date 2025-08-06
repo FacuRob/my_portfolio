@@ -32,7 +32,7 @@ const texts = {
     connect: "Conectar",
     //skillsTitle: "Habilidades y Tecnologías",
     stats: [
-      { value: "3+", label: "Años experiencia" },
+      { value: "1+", label: "Años experiencia" },
       { value: "5+", label: "Proyectos completados" },
     ],
   },
@@ -45,7 +45,7 @@ const texts = {
     connect: "Connect",
     //skillsTitle: "Skills & Technologies",
     stats: [
-      { value: "3+", label: "Years experience" },
+      { value: "1+", label: "Years experience" },
       { value: "5+", label: "Projects completed" },
     ],
   },
