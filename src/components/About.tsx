@@ -86,9 +86,9 @@ const skillsIcons = [
   "express",
   "npm",
   "ts",
+  "py",
   "mysql",
   "mongo",
-  "py",
   "kali",
   "linux",
   "windows",
@@ -98,6 +98,7 @@ const skillsIcons = [
   "visualstudio",
   "postman",
   "netlify",
+  "azure",
   "aws",
 ];
 
