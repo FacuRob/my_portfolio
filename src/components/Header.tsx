@@ -30,7 +30,6 @@ const texts = {
       "Me apasiona construir sistemas eficientes, limpios y con buen diseño que aporten valor.",
     downloadCv: "Descargar CV",
     connect: "Conectar",
-    //skillsTitle: "Habilidades y Tecnologías",
     stats: [
       { value: "1+", label: "Años experiencia" },
       { value: "5+", label: "Proyectos completados" },
@@ -43,7 +42,6 @@ const texts = {
       "I am passionate about building efficient, clean, and well-designed systems that add value.",
     downloadCv: "Download CV",
     connect: "Connect",
-    //skillsTitle: "Skills & Technologies",
     stats: [
       { value: "1+", label: "Years experience" },
       { value: "5+", label: "Projects completed" },
@@ -51,33 +49,17 @@ const texts = {
   },
 };
 
-// Lista de iconos de habilidades y lenguajes
-/*const skillsIcons = [
-  "html",
-  "css",
-  "js",
-  "bootstrap",
-  "react",
-  "vite",
-  "tailwind",
-  "nodejs",
-  "express",
-  "npm",
-  "ts",
-  "mysql",
-  "mongo",
-  "py",
-  "kali",
-  "linux",
-  "windows",
-  "git",
-  "github",
-  "vscode",
-  "visualstudio",
-  "postman",
-  "netlify",
-  "aws",
-];*/
+// Agregar URLs de los CVs
+const cvFiles = {
+  es: {
+    url: "/CV_Facundo_Ezequiel_Robles_ES.pdf",
+    filename: "CV_Facundo_Ezequiel_Robles_ES.pdf",
+  },
+  en: {
+    url: "/CV_Facundo_Ezequiel_Robles_EN.pdf",
+    filename: "CV_Facundo_Ezequiel_Robles_EN.pdf",
+  },
+};
 
 export default function Header({
   language,
@@ -94,6 +76,9 @@ export default function Header({
       setMobileMenuOpen(false);
     }
   };
+
+  // Obtener el CV correspondiente al idioma actual
+  const currentCv = cvFiles[language];
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-800 px-4 w-full relative overflow-hidden pt-16 pb-8">
@@ -225,40 +210,6 @@ export default function Header({
             ))}
           </motion.div>
 
-          {/* Sección de habilidades y lenguajes con animación */}
-          {/*<motion.div
-            className="w-full mt-6 mb-8 px-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <h3 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-              {texts[language].skillsTitle}
-            </h3>
-            <div className="p-4 rounded-lg overflow-hidden relative bg-white dark:bg-gray-700 shadow-sm">
-              <div className="flex w-max animate-infinite-scroll">
-                {skillsIcons.map((icon, index) => (
-                  <div key={index} className="mx-3">
-                    <img
-                      src={`https://skillicons.dev/icons?i=${icon}`}
-                      alt={icon}
-                      className="h-10 w-10 md:h-12 md:w-12"
-                    />
-                  </div>
-                ))}
-          {/*{skillsIcons.map((icon, index) => (
-                  <div key={`duplicate-${index}`} className="mx-3">
-                    <img
-                      src={`https://skillicons.dev/icons?i=${icon}`}
-                      alt={icon}
-                      className="h-10 w-10 md:h-12 md:w-12"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>*/}
-
           {/* Botones de acción */}
           <motion.div
             className="flex flex-col sm:flex-row gap-4 mb-8 w-full px-4"
@@ -273,9 +224,10 @@ export default function Header({
               {texts[language].connect}
               <FiMail />
             </button>
+            {/* Botón de descarga dinámico */}
             <a
-              href="/Facundo_Robles_CV.pdf"
-              download="Facundo_Robles_CV.pdf"
+              href={currentCv.url}
+              download={currentCv.filename}
               className="flex-1 border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 px-6 py-3 rounded-lg text-lg transition flex items-center justify-center gap-2"
             >
               {texts[language].downloadCv}
