@@ -48,18 +48,26 @@ const projectsData: Project[] = [
     websiteUrl: "https://github.com/FacuRob/DevTree",
   },
   {
-    title: "TryHackMe - PDF",
-    image: "images/TryHackMe.png",
+    title: "Menu Digital",
+    image: "images/MenuDigital.png",
     description:
       "Resúmenes en PDF de máquinas virtuales y conceptos de ciberseguridad por TryHackMe.",
-    githubUrl: "https://github.com/FacuRob/TryHackMe",
-    technologies: ["Security", "Networking", "PDF Generation", "Markdown"],
+    githubUrl: "https://github.com/FacuRob/Menu_Digital",
+    technologies: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "NodeJS",
+      "Express",
+      "npm",
+      "Postgresql"
+    ]
   },
   {
-    title: "CyberTools - Ciberseguridad con Python",
-    image: "images/CyberTools.PNG",
+    title: "CyberTools Pro - Ciberseguridad con Python",
+    image: "images/CyberTools.png",
     description:
-      "Conjunto de herramientas de CiberSeguridad realizadas con Python, con funcion de análisis de puertos web, y generador de claves random.",
+      "Conjunto de herramientas de CiberSeguridad realizadas con Python, con funcion de análisis de puertos web, generador de claves y analisis de Metadatos.",
     githubUrl: "https://github.com/FacuRob/CyberTools",
     technologies: [
       "HTML5",
@@ -87,6 +95,14 @@ const projectsData: Project[] = [
       "Linux",
     ],
   },
+  {
+    title: "TryHackMe - PDF",
+    image: "images/TryHackMe.png",
+    description:
+      "Resúmenes en PDF de máquinas virtuales y conceptos de ciberseguridad por TryHackMe.",
+    githubUrl: "https://github.com/FacuRob/TryHackMe",
+    technologies: ["Security", "Networking", "PDF Generation", "Markdown"],
+  },
 ];
 
 const technologyBadges: Record<string, string> = {
@@ -103,6 +119,8 @@ const technologyBadges: Record<string, string> = {
     "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
   MongoDB:
     "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white",
+  Postgresql:
+    "https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white",
   Vite: "https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E",
   Python:
     "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white",

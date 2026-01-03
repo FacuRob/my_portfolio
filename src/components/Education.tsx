@@ -26,7 +26,7 @@ const texts = {
       {
         title: "Seguridad Ofensiva (RedTeam)",
         institution: "EndPoint",
-        year: "2025 - Cursando actualmente",
+        year: "2025",
         description:
           "Formación en técnicas ofensivas de seguridad informática con enfoque en EndPoint.",
       },
@@ -95,7 +95,7 @@ const texts = {
       {
         title: "Offensive Security (RedTeam)",
         institution: "EndPoint",
-        year: "2025 - Currently enrolled",
+        year: "2025",
         description:
           "Training in offensive cybersecurity techniques with focus on EndPoint.",
       },

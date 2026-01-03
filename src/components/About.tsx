@@ -89,6 +89,7 @@ const skillsIcons = [
   "py",
   "mysql",
   "mongo",
+  "postgresql",
   "kali",
   "linux",
   "windows",
@@ -103,15 +104,6 @@ const skillsIcons = [
 ];
 
 export default function About({ language, darkMode }: AboutProps) {
-  const handleDownloadCV = () => {
-    const pdfUrl = "/Facundo_Robles_CV.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Facundo_Robles_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <section
